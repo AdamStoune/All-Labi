@@ -1,0 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: xx-large;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 100px auto auto 100px;
+    grid-template-columns: 1fr;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.head, .end {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    grid-row: 1 / 2;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.end {
+    grid-row: 4 / 5;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.b1, .b2, .b3, .b4, .b5 {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.b1 {
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(2, 1fr);
+    height: 250px;
+}
+
+.b11, .b12 {
+    padding: 15px;
+    background-color: rgb(255, 0, 0);
+    margin: 10px;
+}
+
+.b2 {
+    grid-row: 3 / 4;
+    padding: 15px;
+    background-color: rgb(255, 132, 18);
+    margin: 10px;
+    height: 250px;
+}
+
+.b3 {
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(4, 1fr);
+    height: 250px;
+}
+
+.b31, .b32, .b33, .b34 {
+    padding: 15px;
+    background-color: rgb(223, 226, 14);
+    margin: 10px;
+}
+
+.b4 {
+    grid-row: 3 / 4;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row-reverse;
+    height: 250px;
+}
+
+.b41, .b42 {
+    padding: 15px;
+    background-color: rgb(16, 151, 63);
+    margin: 10px;
+}
+
+.b41 {
+    grid-column: 1 / 2;
+    width: 948px;
+}
+
+.b5 {
+    grid-row: 3 / 4;
+    grid-template-columns: repeat(2, 1fr);
+    height: 250px;
+}
+
+.b51, .b52 {
+    padding: 15px;
+    background-color: rgb(18, 234, 50);
+    margin: 10px;
+}
+
+@media (max-width: 700px) {
+    .main {
+        grid-template-rows: 100px auto 100px;
+        grid-template-columns: 1fr;
+    }
+    
+    .b1, .b3, .b4, .b5 {
+        grid-template-columns: 1fr;
+    }
+
+    .b4 {
+        grid-template-columns: 1fr;
+    }
+
+    .b41 {
+        grid-column: 1;
+    }
+}

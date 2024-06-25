@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.custom-style {
+            -image: url('Grodno.png');
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: green;
+        }
+
+        body.custom-style a {
+            color: red;
+            text-decoration: none;
+        }
+        button{
+            width: 300px;
+            background-color: aquamarine;
+        }
+        img{
+            width: 605px;
+        }
+    </style>
+    <script>
+        // Установка тестовых cookie
+        document.cookie = "username=John Doe";
+        document.cookie = "sessionToken=abc123";
+
+        // Функция для получения всех cookie
+        function getCookies() {
+            return document.cookie;
+        }
+
+        // Функция для вывода информации о cookie
+        function logCookies() {
+            console.log("Current Cookies: ", getCookies());
+        }
+
+        // Запуск функции logCookies через каждые 3 секунды
+        setInterval(logCookies, 3000);
+
+        // Удаление первого элемента при щелчке по нему
+        document.addEventListener("DOMContentLoaded", function() {
+            const firstElement = document.body.firstElementChild;
+            if (firstElement) {
+                firstElement.addEventListener("click", function() {
+                    firstElement.remove();
+                });
+            }
+
+            // Обработчик для изменения стиля по нажатию на кнопку
+            const styleButton = document.getElementById('styleButton');
+            if (styleButton) {
+                styleButton.addEventListener('click', function() {
+                    document.body.classList.toggle('custom-style');
+                });
+            }
+
+            // Обработчик для получения информации об ОС и открытия нового окна
+            const osInfoButton = document.getElementById('osInfoButton');
+            if (osInfoButton) {
+                osInfoButton.addEventListener('click', function() {
+                    const osInfo = navigator.userAgent;
+                    const newWindow = window.open('', '', 'width=500,height=400');
+                    newWindow.document.write(
+                    );
+                    setTimeout(() => newWindow.close(), 4000);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>Войтулевич Адам Андреевич</p>
+    <a href="https://s13.ru/?ysclid=lxoj8q8zu5489514944">Новости Гродно</a><br>
+    <img src="Grodno.png" alt=""><br>
+    <button id="styleButton">Изменить стиль</button>
+    <button id="osInfoButton">Получить информацию об ОС</button>
+</body>
+</html>

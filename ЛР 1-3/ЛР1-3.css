@@ -1,0 +1,56 @@
+/* 1. Синтаксис CSS */
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color: rgb(232, 147, 147);
+}
+
+/* 2. Способы внедрения CSS */
+h1, h3 {
+    color: black;
+}
+
+h2{
+    color: rgb(217, 255, 0);
+    margin-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* 3. Селекторы в CSS */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+img{
+    border-radius: 25px;
+}
+
+input{
+    color: rgb(243, 219, 7);
+    background-color: cadetblue;
+}
+
+table{
+    background-color: rgb(230, 100, 67);
+    border: 5px dotted rgb(0, 0, 0);
+}
+
+.font{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: smaller;
+}
+
+.gs:hover{
+    color: aqua;
+}

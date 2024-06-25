@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="alert('3 способ');">
+    <script type="text/javascript">
+        alert('1 способ');
+    </script>
+    <script src="script.js"></script>
+    <button type="button" onclick="date()">Показать время</button>
+    <script>
+        function date() {
+            var currentTime = new Date();
+            var year = currentTime.getFullYear();
+            var month = currentTime.getMonth();
+            var day = currentTime.getDate();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            var timeString = year + " " + day + " " + (     month + 1) + " " + hours + ':' + minutes + ':' + seconds;
+            alert('Текущее время: ' + timeString);
+        }
+    </script>
+    <a href="JavaScript:alert('4 способ');">Кликните здесь</a>
+</body>
+</html>

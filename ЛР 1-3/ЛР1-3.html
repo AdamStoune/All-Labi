@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ЛР1-3.css">
+    <title>HTML документ</title>
+</head>
+<body>
+    <h2>Пример HTML документа</h2>
+    
+    <!-- Оформление текста -->
+    <p>Это обычный <em>курсивный</em> текст.</p>
+    <p>Это текст с <strong>полужирным</strong> стилем.</p>
+    <p>Это <u>подчеркнутый</u> текст.</p>
+    <p>Это текст <del>с перечеркиванием</del>.</p>
+
+    <!-- Списки -->
+    <h2><a name="skills"></a>Мои навыки:</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Изображения -->
+    <img src="img/kartina.png" alt="Моя фотография">
+
+    <!-- Аудио и видео-контент -->
+    <h2>Мои любимые исполнители:</h2>
+    <audio controls>
+        <source src="img/musica.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <h2>Расслабляющее видео</h2>
+    <video src="img/wild.mp4" controls="controls"></video>
+
+    <!-- Таблицы -->
+    <h2>Таблица с данными</h2>
+    <table border="1">
+        <tr>
+            <th>Имя</th>
+            <th>Возраст</th>
+            <th>Пол</th>
+            <th>Телефон</th>
+        </tr>
+        <tr>
+            <td>Адам</td>
+            <td>25</td>
+            <td>муж</td>
+            <td>+375(29)29-22-310</td>
+        </tr>
+        <tr>
+            <td>Ярик</td>
+            <td>30</td>
+            <td>муж</td>
+            <td>+375(33)29-67-554</td>
+
+        </tr>
+    </table>
+
+    <h2>Нум. список</h2>
+    <ol>
+        <li>Адам</li>
+        <li>Ярослав</li>
+        <li>Алексей</li>
+        <li>Дмитрий</li>
+    </ol>
+
+    <!-- Пользовательские формы -->
+    <h2>Заполнение данных</h2>
+    <form>
+        <label for="username">Имя:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        Пол:<select name="age" size="1">
+            <option value="1">Мужской</option>
+            <option value="2">Женский</option>
+        </select>
+
+        <h2>Навыки в:</h2>
+        <input type="checkbox">JavaScript
+        <br>
+        <input type="checkbox">Python
+        <br>
+        <input type="checkbox">HTML и CSS
+        <br>
+        <input type="checkbox">Java
+        <br>
+        Комментарий: <br>
+        <textarea name="comment" id="5" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Отправить">
+
+    </form>
+    <br>
+    <!-- Гиперссылки -->
+    <a class="gs" href="#skills" name="skills">Перейти к навыкам</a>
+    <br>
+    <a class="gs" href="https://github.com/AdamStoune">Мой GitHub</a>
+
+    <!-- Спецсимволы -->
+    <p class="font">Это пример &copy; копирайта.</p>
+
+    <!-- Семантические теги -->
+    <footer>
+        <p class="font">© 2024 Мой сайт</p>
+    </footer>
+</body>
+</html>

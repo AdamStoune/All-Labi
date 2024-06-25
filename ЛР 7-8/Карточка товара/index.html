@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Карточка товара</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        .error {
+            border: 2px solid red;
+        }
+        .error-message {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+        input:invalid + .error-message {
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <img class="close" width="50" height="50" src="remove.png" alt="Выйти">
+            <div class="container_1">
+                <div class="container_1_1">
+                    <h1>ЗАЯВКА НА ПЕРЕВОЗКУ</h1>
+                    <h2>Шаг <span class="yellow">1</span> из <span class="yellow">3</span></h2>
+                </div>
+            </div>
+            <div class="container_2">
+                <h3>Информация о заказчике и грузе</h3>
+                <h3>Отправитель груза</h3>
+                <h3>Получатель груза</h3>
+            </div>
+            <form id="transport-form">
+                <div class="container_3">
+                    <div class="container_3_1">
+                        <h3>Заказчик (плательщик)<span class="red">*</span></h3>
+                        <input type="text" id="customer" required>
+                        <span class="error-message">Это поле обязательно для заполнения</span>
+                    </div>
+                    <div class="container_3_2">
+                        <h3>Электронная почта<span class="red">*</span></h3>
+                        <input type="email" id="email" required>
+                        <span class="error-message">Введите корректный адрес электронной почты</span>
+                    </div>
+                    <div class="container_3_3">
+                        <h3>Контактное лицо ФИО<span class="red">*</span></h3>
+                        <input type="text" id="contact" required>
+                        <span class="error-message">Это поле обязательно для заполнения</span>
+                    </div>
+                    <div class="container_3_4">
+                        <h3>Телефон (+xxx)хх-xx-xx-xxx<span class="red">*</span></h3>
+                        <input type="text" id="phone" pattern="\+\d{3}\d{2}\d{2}\d{2}\d{3}" required>
+                        <span class="error-message">Введите номер телефона в формате (+xxx)хх-xx-xx-xxx</span>
+                    </div>
+                    <div class="container_3_5">
+                        <h3>Краткое наименование груза</h3>
+                        <input type="text" id="cargo-name">
+                        <span class="error-message">Это поле обязательно для заполнения</span>
+                    </div>
+                    <div class="container_3_6">
+                        <h3>Количество мест</h3>
+                        <input type="number" id="cargo-quantity" min="1">
+                        <span class="error-message">Минимальное значение 1</span>
+                    </div>
+                    <div class="container_3_7">
+                        <h3>Вид упаковки</h3>
+                        <input type="text" id="packing-type">
+                        <span class="error-message">Это поле обязательно для заполнения</span>
+                    </div>
+                    <div class="container_3_8">
+                        <h3>Объём груза</h3>
+                        <input type="number" id="cargo-volume" min="0">
+                        <span class="error-message">Минимальное значение 0</span>
+    </div>
+                    <div class="container_3_9">
+                        <h3>Объявленная стоимость</h3>
+                        <input type="number" id="declared-value" min="0">
+                        <span class="error-message">Минимальное значение 0</span>
+                    </div>
+                    <div class="container_3_10">
+                        <h3>Вес груза</h3>
+                        <input type="number" id="cargo-weight" min="0">
+                        <span class="error-message">Минимальное значение 0</span>
+                    </div>
+                    <div class="container_3_11">
+                        <button type="button" class="first">Скачать бланк заявки</button>
+                    </div>
+                    <div class="container_3_12">
+                        <button type="submit" class="second">Продолжить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card">
+            <img src="Podarochniy_nabor_Kot.jpg" alt="Товар" width="350" height="350">
+            <p class="purple">Скоро закончится</p>
+            <a href="">Подарочный набор "Корги"</a>
+            <p class="grey">330 мл. OZ</p>
+            <div class="contain_1">
+                <p>18,80 руб</p>
+                <p>19,79 руб</p>
+            </div>
+            <div class="contain_2">
+                <p>-5%</p>
+                <p><i style="font-size:15px; margin-right: 5px;" class="fa">&#xf219;</i>0,19</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

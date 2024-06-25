@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Текущий час</title>
+    <script>
+        function showCurrentHour() {
+            var currentDate = new Date();
+            var currentHour = currentDate.getHours();
+            alert("Текущий час: " + currentHour);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showCurrentHour()">Показать год</button>
+
+    <h1>Вывод Фамилии и Имени</h1>
+    <button onclick="displayNames()">Показать Фамилию и Имя</button>
+    <div id="result"></div>
+
+
+
+    <h1>Работа с массивом</h1>
+    <p>Исходный массив: <span id="original-array"></span></p>
+    <p>Произведение нечетных элементов: <span id="product-odd"></span></p>
+    <p>Перевернутый массив: <span id="reversed-array"></span></p>
+
+
+    <h1>Работа со строками</h1>
+    <label for="surname">Введите вашу фамилию:</label>
+    <input type="text" id="surname" name="surname"><br><br>
+    
+    <label for="address">Введите ваш адрес:</label>
+    <input type="text" id="address" name="address"><br><br>
+    
+    <button onclick="processStrings()">Выполнить</button>
+
+    <p>Длина строки адреса: <span id="length-address"></span></p>
+    <p>Сцепление строк: <span id="concatenated"></span></p>
+    <p>Адрес в нижнем регистре: <span id="lowercase-address"></span></p>
+
+    <script>
+        function processStrings() {
+            // Получает значения из полей ввода
+            let S1 = document.getElementById('surname').value;
+            let S2 = document.getElementById('address').value;
+
+            // Определяет длину строки S2
+            let lengthS2 = S2.length;
+
+            // Выполняет сцепление строки S1 и S2
+            let concatenated = S1 + ' ' + S2;
+
+            // Преобразует строку S2 в нижний регистр
+            let lowercaseS2 = S2.toLowerCase();
+
+            // Выводит результаты
+            document.getElementById('length-address').innerText = lengthS2;
+            document.getElementById('concatenated').innerText = concatenated;
+            document.getElementById('lowercase-address').innerText = lowercaseS2;
+        }
+    </script>
+
+    <script>
+        // Создает массив из 8 целых элементов
+        let array = [1, 3, 5, 6, 4, 9, 7, 13];
+
+        // Находит произведение нечетных элементов
+        let productOdd = array.filter(num => num % 2 !== 0).reduce((product, num) => product * num, 1);
+
+        // Переворачивает массив
+        let reversedArray = [...array].reverse();
+
+        // Выводит исходный массив
+        document.getElementById('original-array').innerText = array.join(', ');
+
+        // Выводит произведение нечетных элементов
+        document.getElementById('product-odd').innerText = productOdd;
+
+        // Выводит перевернутый массив
+        document.getElementById('reversed-array').innerText = reversedArray.join(', ');
+    </script>
+
+    <script>
+        function displayNames() {
+            // Запрашивает у пользователя фамилию и имя
+            let lastName = prompt("Введите вашу фамилию:");
+            let firstName = prompt("Введите ваше имя:");
+
+            // Запрашивает у пользователя значение n
+            let n = parseInt(prompt("Введите значение n:"));
+
+            // Проверяет корректность ввода n
+            if (isNaN(n) || n < 0) {
+                alert("Введите корректное число для n.");
+                return;
+            }
+
+            // Полное имя
+            let fullName = lastName + " " + firstName;
+
+            // Находит элемент для вывода результата
+            let resultDiv = document.getElementById("result");
+
+            // Очищает предыдущий результат
+            resultDiv.innerHTML = "";
+
+            // Выводит фамилию и имя n+5 раз
+            for (let i = 0; i < n + 5; i++) {
+                resultDiv.innerHTML += fullName + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
